@@ -1,0 +1,369 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.header {
+    width: 100%;
+    height: 100%;
+}
+
+.fondo {
+    margin: 5px 0;
+    flex-direction: column;
+    background-image: url(./Imagenes/patron-spezia2.png);
+    background-size: 90%;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.barratop {
+    width: 100%;
+    height: 25px;
+    margin: 0;
+    padding: 0;
+    background: #AE0009;
+}
+
+.barrabotton {
+    width: 100%;
+    height: 25px;
+    margin: 0;
+    padding: 0;
+    background: #123A16;
+    
+}
+
+.logo {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
+    
+}
+.logo img {
+    width: 50%;
+    padding: 25px 0 25px 0;
+    
+}
+
+h1 {
+    
+    font-size: 36px;
+    color: #123A16;
+}
+
+p {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 25px;
+}
+.card-icons {
+    display: flex;
+    width: 150px;
+    position: relative;
+    margin-top: 10px;
+    list-style: none;
+    
+    }
+
+
+.card-icons li {
+    border-radius: 0%;
+    /*background-color: #ffffff;*/
+    height: 80px;
+    width: 80px;    
+    line-height: 4px;
+    text-align: center;
+    transform: scale(1);
+    transition: all 0.5s ease;      
+}
+
+.card-icons li a:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 5px #5e5e5e;
+}
+
+.card-icons li a{
+    color: #fff;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    background: #123a16;
+    display: block;
+    line-height: 60px;
+    transition: all 0.3s;    
+}
+
+h3 {
+    font-size: 35px;
+    animation: 0.5s sombra infinite;  
+}
+
+@keyframes sombra {
+    0% {
+        text-shadow: red -3px 0, cyan 3px 0;
+    }
+    50% {
+        text-shadow: red 3px 0, cyan -3px 0;
+    }
+    100% {
+        text-shadow: red -3px 0, cyan 3px 0;
+    }
+    
+}
+.cuerpo {
+    margin: 0;
+    padding: 0;
+    width: auto;
+    height: 57vh;
+    background-color: #fff;
+    text-align: center;   
+}
+
+.contenidobadia {
+    padding: 15px 15px;
+    text-align: left;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 0px;
+}
+.badia {
+    background-color: #fff;
+    width: auto;
+    height: auto;
+}
+
+.badia img {
+    width: 15%;
+    align-items: center;
+    margin-bottom: 0;
+
+}
+
+
+.olivos {
+    background-color: #ffffff;
+
+}
+
+.olivos img {
+     width: 15%;
+}
+
+@media (max-width:800px){
+    .fondo {
+        background-size: 150%;
+    }
+    H1 {
+        font-size: 20px;
+    }
+    p {
+        font-size: 15px;
+    }
+
+    H3 {
+        font-size: 20px;
+    }
+}
+
+.espacio {
+    width: 100vw;
+    height: 100px;
+}
+
+.contenedor_principal {
+    width: inherit;
+    height: inherit;
+    padding: 150px;
+    background-color: #888;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor_2do {
+    width: 500px;
+    height: 550px;
+    background-color: inherit;
+    display: block;
+}
+
+.score_board {
+    width: inherit;
+    height: 10%;
+    border-radius: 7px 7px 0 0;
+    font-size: 24px;
+    text-shadow: 1px 3px 2px white;
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ptos {
+    width: fit-content;
+    height: fit-content;
+    margin-left: 10%;
+    color: yellow;
+}
+
+.hi {
+    width: fit-content;
+    height: fit-content;
+    margin-right: 10%;
+    color: #CCC;
+}
+
+.board {
+    width: 100%;
+    height: 90%;
+    border: 1px solid black;
+    background: linear-gradient(seagreen, green);
+    display: grid;
+    grid-template: repeat(20, 1fr) / repeat(20, 1fr);
+}
+
+.sprite {
+    width: 100%;
+    height: 100%;
+}
+
+.manzana {
+    border-radius: 40%;
+    background-image: url(./Imagenes/chile.png);
+    background-size: 75% ;
+    /*box-shadow: 2px 2px 7px rgba(0,0,0,0.7);*/
+    grid-area: 3 / 3;
+}
+
+.snake {
+    background-color: yellowgreen;
+    box-shadow: 2px 2px 9px lightyellow;
+}
+
+#game_over {
+    width: 100%;
+    height: 90%;
+    border: 1px solid black;
+    background: linear-gradient(seagreen, green);
+    font-size: 64px;
+    font-weight: bold;
+    text-shadow: 2px 2px 7px black;
+    color: orangered;
+    display: none;
+    grid-template-rows: repeat(2, 1fr);
+    align-items: flex-end;
+    justify-content: center;
+}
+
+#rejugar {
+    width: 90%;
+    height: fit-content;
+    font-size: 24px;
+    font-weight: 400;
+    align-self: center;
+    justify-self: center;
+    color: black;
+    border-radius: 6px;
+    background: linear-gradient(#BBB, #555);
+    box-shadow: inset -3px -2px 2px rgba(0,0,0,0.7);
+    cursor: pointer;
+    padding: 3%;
+
+}
+
+#rejugar:active {
+    transform: translate(-3px,-4px);
+}
+
+.control_buttons {
+    width: fit-content;
+    height: fit-content;
+    display: none;
+    align-items: center;
+    justify-items: center;
+}
+
+.uplerido {
+    height: 50px;
+    color: black;
+    border-radius: 6px;
+    background: linear-gradient(#CCC, #777);
+    font-size: 30px;
+    font-weight: bold;
+    box-shadow: -3px -2px 2px rgba(0,0,0,0.7);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.uplerido:active {
+    transform: translate(-2px,-4px);
+}
+
+#up, #do {
+    width: 300px;
+}
+
+#le, #ri {
+    width: 150px;
+    height: 60px;
+}
+
+.flecha_direccion {
+    box-sizing: content-box;
+    width: 1px;
+    height: 1px;
+    border: 20px solid;
+}
+
+.arriba {
+    border-color: transparent transparent black transparent;
+    margin: 0 0 7% 0;
+}
+.izquierda {
+    border-color: transparent black transparent transparent;
+}
+.derecha {
+    border-color: transparent transparent  transparent black;
+}
+.abajo {
+    border-color: black transparent transparent transparent;
+    margin: 7% 0 0 0;
+}
+
+@media screen and (max-width: 500px) {
+    .contenedor_principal {
+        align-items: flex-start;
+    }
+
+    .contenedor_2do {
+        width: 300px;
+        height: 350px;
+    }
+
+    .score_board {
+        font-size: 18px;
+    }
+
+    .control_buttons {
+        display: flex;
+
+    }
+
+    #game_over {
+        font-size: 32px;
+    }
+
+    #rejugar {
+        font-size: 14px;
+    }
+}
